@@ -1,5 +1,5 @@
 - name: backup old crontab
-  shell: crontab -l > ~/backup.cron
+  shell: crontab -l > ~/backup.cron  2> /dev/null || true
 
 - name: copy image-clean script
   copy:
